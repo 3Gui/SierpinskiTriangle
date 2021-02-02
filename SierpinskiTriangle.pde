@@ -4,18 +4,29 @@ public void setup()
   background(0);
   noStroke();
   size(500,500);
-  frameRate(1);
+  frameRate(60);
+  fill((float)(Math.random()*155+100),(float)(Math.random()*155+100),(float)(Math.random()*155+100));
+  sierpinski(50,450,400);
 }
 public void draw()
 {
-  fill((float)(Math.random()*155+100),(float)(Math.random()*155+100),(float)(Math.random()*155+100));
-  sierpinski(50,450,400);
+  
   
 }
-public void mouseDragged()//optional
-{
 
+public void mousePressed(){
+  
+  int size = (int)(Math.random()*250)+200;
+  if(mousePressed){
+  background(0);
+  fill((float)(Math.random()*155+100),(float)(Math.random()*155+100),(float)(Math.random()*155+100));
+  sierpinski((500-size)/2,(500+size)/2,size);
+    
+  }
+  
+  
 }
+
 public void sierpinski(int x, int y, int len) 
 {
   if(len < base){
