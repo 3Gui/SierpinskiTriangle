@@ -19,7 +19,7 @@ public void mousePressed(){
   int size = (int)(Math.random()*250)+200;
   if(mousePressed){
   background(0);
-  fill((float)(Math.random()*155+100),(float)(Math.random()*155+100),(float)(Math.random()*155+100));
+  fill((float)(Math.random()*155+100),(float)(Math.random()*100+400),(float)(Math.random()*155+100));
   sierpinski((500-size)/2,(500+size)/2,size);
     
   }
